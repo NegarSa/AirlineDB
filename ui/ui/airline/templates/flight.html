@@ -1,0 +1,21 @@
+{% if list %}
+    <ul>
+        <table style=" text-align:center">
+     <tr>
+       <th>Origin Airport</th>
+       <th>Destination Airport</th>
+       <th>Captain Firstname   </th>
+       <th>Captain Lastname   </th>
+       <th>Date</th>
+       <th>TimeSlot</th>
+     </tr>
+     {% for row in list %}
+     <tr>
+         {% for i in row %}
+         <td>{{i}}</td>
+         {% endfor %}
+     </tr>
+    {% endfor %}
+   </table>
+    </ul>
+{% endif %}
